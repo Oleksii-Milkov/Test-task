@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:test_task/input/input_page.dart';
+import 'package:test_task/output_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -33,41 +35,32 @@ class MyHomePage extends StatelessWidget {
           children: <Widget>[
             ListTile(
               title: const Text('Input'),
-              onTap: () {},
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const InputPage(),
+                  ),
+                );
+              },
             ),
             ListTile(
               title: const Text('Output'),
-              onTap: () {},
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const OutputPage(fullName: ""),
+                  ),
+                );
+              },
             ),
           ],
         ),
       ),
       body: const Center(),
     );
-  }
-}
-
-class InputPage extends StatelessWidget {
-  const InputPage({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold();
-  }
-}
-
-class OutputPage extends StatefulWidget {
-  const OutputPage({Key? key}) : super(key: key);
-
-  @override
-  State<OutputPage> createState() {
-    return _OutputPageState();
-  }
-}
-
-class _OutputPageState extends State<OutputPage> {
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold();
   }
 }
