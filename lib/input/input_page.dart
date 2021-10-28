@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:test_task/input/form.dart';
+import 'package:test_task/input/input_form.dart';
 
 class InputPage extends StatelessWidget {
   const InputPage({Key? key}) : super(key: key);

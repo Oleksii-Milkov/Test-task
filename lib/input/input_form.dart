@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:test_task/output_page.dart';
+import 'package:test_task/output/output_page.dart';
 
 class InputForm extends StatefulWidget {
   const InputForm({Key? key}) : super(key: key);
